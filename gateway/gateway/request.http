@@ -1,0 +1,8 @@
+### Pobranie wszystkich albumów przez Gateway
+GET http://localhost:8080/api/albums
+Accept: application/json
+
+
+### Pobranie wszystkich piosenek przez Gateway
+GET http://localhost:8080/api/songs
+Accept: application/json

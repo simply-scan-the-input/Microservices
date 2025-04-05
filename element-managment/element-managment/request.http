@@ -1,0 +1,55 @@
+###TASK2 TEST
+@albumId=59373080-3c95-4ca0-8605-b4beb2a1c4d8
+### SPRAWDZ STATUS ALBUMOW
+GET http://localhost:8082/api/albums
+Accept: application/json
+
+### ZOBACZ KONKRETNY ALBUM
+GET http://localhost:8082/api/albums/{{albumId}}/songs
+
+
+
+### Pobranie wszystkich piosenek
+GET http://localhost:8082/api/songs
+Accept: application/json
+
+
+
+
+
+### Pobranie wszystkich piosenek w danym albumie
+GET http://localhost:8082/api/albums/{{albumId}}/songs
+Accept: application/json
+
+###
+@songId=89937155-0821-4a81-b297-3bfa7cb64887
+### Dodanie nowej piosenki do albumu
+POST http://localhost:8082/api/albums/{{albumId}}/songs
+Content-Type: application/json
+
+{
+  "title": "pioskna",
+  "author": "balablabal"
+}
+
+###
+
+### Pobranie konkretnej piosenki z albumu
+GET http://localhost:8082/api/albums/{{albumId}}/songs/{{songId}}
+Accept: application/json
+
+###
+
+### Aktualizacja piosenki w albumie
+PUT http://localhost:8082/api/albums/{{albumId}}/songs/{{songId}}
+Content-Type: application/json
+
+{
+  "title": "Creep (Remastered)",
+  "author": "Radiohead"
+}
+
+###
+
+### Usunięcie piosenki z albumu
+DELETE http://localhost:8082/api/albums/{{albumId}}/songs/{{songId}}

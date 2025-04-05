@@ -1,0 +1,34 @@
+### Pobranie wszystkich albumów
+GET http://localhost:8081/api/albums
+Accept: application/json
+
+###
+
+### Dodanie nowego albumu
+POST http://localhost:8081/api/albums
+Content-Type: application/json
+
+{
+  "name": "album1"
+}
+
+###
+@albumId=df1bc409-cede-4552-967c-a187b33ed799
+### Zaktualizowanie istniejącego albumu
+PUT http://localhost:8081/api/albums/{{albumId}}
+Content-Type: application/json
+
+{
+  "name": "Updated Rock Classics"
+}
+
+###
+
+### Pobranie albumu po ID
+GET http://localhost:8081/api/albums/{{albumId}}
+Accept: application/json
+
+###
+
+### Usunięcie albumu
+DELETE http://localhost:8081/api/albums/{{albumId}}

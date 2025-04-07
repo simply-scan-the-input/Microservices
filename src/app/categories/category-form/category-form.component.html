@@ -1,0 +1,9 @@
+<h1>Add New Category</h1>
+    <form (ngSubmit)="onSubmit()" #categoryForm="ngForm">
+      <div>
+        <label for="name">Category Name:</label>
+        <input type="text" id="name" name="name" [(ngModel)]="category.name" required />
+      </div>
+      <button type="submit" [disabled]="categoryForm.invalid">Add Category</button>
+      <button type="button" (click)="onCancel()">Cancel</button>
+    </form>

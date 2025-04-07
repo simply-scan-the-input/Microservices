@@ -1,0 +1,10 @@
+<h1>{{ category.name }}</h1>
+<p>{{ category.description }}</p>
+
+<h2>Songs</h2>
+<ul>
+  <li *ngFor="let song of elements">
+    {{ song.id }} <!-- Wyświetlenie nazwy piosenki -->
+    <button (click)="deleteElement(song.id)">Delete</button> <!-- Usuń piosenkę -->
+  </li>
+</ul>
